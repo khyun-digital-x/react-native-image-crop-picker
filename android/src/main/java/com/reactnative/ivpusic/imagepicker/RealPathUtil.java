@@ -106,6 +106,7 @@ class RealPathUtil {
         String tmpDir = context.getCacheDir() + "/react-native-image-crop-picker";
         Boolean created = new File(tmpDir).mkdir();
         fileName = fileName.substring(fileName.lastIndexOf('/') + 1);
+        fileName = fileName.replace("%","_");
         File path = new File(tmpDir);
         File file = new File(path, fileName);
         try {
